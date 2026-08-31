@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PSAT Math &amp;mdash; Exponential Functions &amp; Growth Guide</title><style>
+:root{
+  --ink:#1d1d1d; --muted:#5a5f66; --line:#e3e6ea; --bg:#f4f6f8; --card:#fff;
+  --good:#1a7f4b; --good-bg:#e6f4ec; --bad:#c0392b; --bad-bg:#fbecea;
+  --accent:#2f5fd0; --omit:#8a6d1f; --omit-bg:#fbf3d9; --hi:#eef3ff; --hi-b:#cfdcfb;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.6}
+.wrap{max-width:880px;margin:0 auto;padding:32px 22px 80px}
+h1{font-size:26px;margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 22px;font-size:14px}
+h2{font-size:19px;margin:32px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--line)}
+h3{font-size:16px;margin:20px 0 8px}
+.nav{margin-bottom:18px;font-size:13px;display:flex;gap:16px;flex-wrap:wrap}
+.nav a{color:var(--accent);text-decoration:none}
+.nav a:hover{text-decoration:underline}
+.pill{display:inline-block;font-size:11px;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--accent);background:var(--hi);border:1px solid var(--hi-b);border-radius:20px;padding:3px 10px;margin-bottom:10px}
+.block{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:10px;padding:16px 20px;margin:12px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.block h4{margin:0 0 8px;font-size:15px}
+.block ul{margin:6px 0 0 18px;padding:0}
+.block li{margin:5px 0}
+.callout{background:var(--hi);border:1px solid var(--hi-b);border-radius:10px;
+  padding:14px 18px;font-size:14px;margin:12px 0}
+.callout b{color:var(--accent)}
+.trap{background:var(--bad-bg);border:1px solid #f0c9c3;border-radius:10px;padding:14px 18px;font-size:14px;margin:12px 0}
+.trap b{color:var(--bad)}
+.fml{background:#fafbfc;border:1px solid var(--line);border-radius:8px;padding:10px 14px;
+  margin:8px 0;font-size:15px;font-family:"SF Mono",Menlo,Consolas,monospace}
+.eg{background:#fafbfc;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0}
+.eg .step{margin:4px 0;font-size:14px}
+.q{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--muted);
+  border-radius:10px;padding:16px 20px;margin:14px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.q.orig{border-left-color:var(--bad)}
+.q .qref{font-weight:700;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+.q .stem{margin:6px 0 10px}
+.opts{list-style:none;padding:0;margin:0 0 6px}
+.opts li{padding:5px 10px;border:1px solid var(--line);border-radius:8px;margin:5px 0;font-size:14px}
+.optltr{display:inline-block;width:22px;font-weight:700}
+details{margin-top:8px;border:1px solid var(--line);border-radius:8px;background:#fafbfc}
+details[open]{background:#fff}
+summary{cursor:pointer;padding:10px 14px;font-size:13px;font-weight:600;color:var(--accent);
+  list-style:none;user-select:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸ ";}
+details[open] summary::before{content:"▾ ";}
+.soln{padding:2px 16px 14px;font-size:14px}
+.soln .step{margin:6px 0}
+.soln .ans{margin-top:10px;font-weight:700;color:var(--good)}
+sup{font-size:.75em}
+footer{color:var(--muted);font-size:13px;margin-top:40px;text-align:center}
+.vids{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+@media (max-width:640px){.vids{grid-template-columns:1fr}}
+.vid{background:var(--card);border:1px solid var(--line);border-left:4px solid #c0392b;
+  border-radius:10px;padding:14px 16px;text-decoration:none;color:inherit;display:block;
+  box-shadow:0 1px 2px rgba(0,0,0,.03);transition:transform .1s,box-shadow .1s}
+.vid:hover{transform:translateY(-1px);box-shadow:0 3px 10px rgba(0,0,0,.08)}
+.vid .vlbl{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#c0392b;font-weight:700}
+.vid .vt{font-size:14px;font-weight:600;margin:2px 0 4px}
+.vid .vs{font-size:12px;color:var(--muted)}
+@media print{body{background:#fff}.block,.q,.vid{box-shadow:none}.nav{display:none}
+  details{border:none;background:#fff}summary{display:none}.soln{padding:0}.wrap{max-width:none;padding:0}}
+</style></head><body><div class="wrap"><div class="nav"><a href="index.html">&larr; Dashboard</a><a href="math_ws_exponentials.html">Worksheet: Exponential Functions &amp; Growth &rarr;</a></div><span class="pill">Study guide &middot; Priority 2</span><h1>Exponential Functions &amp; Growth</h1><p class="sub">P(t) = P&#8320;&middot;r<sup>t</sup> · geometric sequences · doubling · changing the time base</p><div class="callout"><b>Fixes these misses:</b> M1 Q14 (doubling), M1 Q19 (geometric sequence), M2 Q10 (rate per period).</div><h2>Core concepts</h2><div class="block"><h4>The exponential model</h4><div class="fml">P(t) = P&#8320; &middot; r<sup>t</sup></div><ul><li><b>P&#8320;</b> is the starting amount; <b>r</b> is the growth factor per one unit of t.</li><li>Growth of p% per period &rarr; r = 1 + p/100. Decay of p% &rarr; r = 1 &minus; p/100.</li><li>r = 2 means doubling each period; r = &frac12; means halving.</li></ul></div><div class="block"><h4>Doubling / halving every k units</h4><div class="fml">P(t) = P&#8320; &middot; 2<sup>(t/k)</sup></div><ul><li>If it doubles every k time units, the exponent is t/k, not t.</li><li>Example: doubles every 3 hours, after 15 hours &rarr; 2<sup>(15/3)</sup> = 2<sup>5</sup> = 32&times;.</li></ul></div><div class="block"><h4>Geometric sequences</h4><div class="fml">a&#8345; = a&#8321; &middot; r<sup>(n&minus;1)</sup></div><ul><li>"Each term is R times the one before" &rarr; geometric with ratio r = R.</li><li>The exponent is (n &minus; 1) because the first term uses r<sup>0</sup> = 1.</li></ul></div><div class="block"><h4>Changing the time base</h4><ul><li>To convert a per-year rate to per-18-months, raise the yearly factor to the 1.5 power.</li><li>Per-period factor = r<sup>(period length in years)</sup>; then percent change = (factor &minus; 1)&times;100.</li></ul></div><h2>Worked example &mdash; rate per period</h2><div class="eg"><div class="step"><b>Problem.</b> P(t) = 290&middot;(1.0446)<sup>t</sup> models population t years after 2005. It increases by n% every 18 months. Find n.</div><div class="step">18 months = 1.5 years, so the growth factor over one period is (1.0446)<sup>1.5</sup>.</div><div class="step">(1.0446)<sup>1.5</sup> &asymp; 1.0676.</div><div class="step">That&rsquo;s about a 6.76% increase &rarr; n &asymp; 6.8 (this is the M2 Q10 answer).</div></div><div class="trap"><b>Watch out:</b> Don&rsquo;t read r directly as the answer. r = 1.0446 is the <b>yearly</b> factor; the question asks per 18 months, so you must raise it to the 1.5 power first. Reading "4.46%" straight off is the trap that cost the point.</div><h2>Video lessons</h2><p class="sub">Curated walkthroughs from trusted math channels &mdash; watch one or two before doing the worksheet.</p><div class="vids"><a class="vid" href="https://www.youtube.com/results?search_query=khan+academy+exponential+growth+and+decay" target="_blank" rel="noopener"><div class="vlbl">Khan Academy</div><div class="vt">Exponential growth &amp; decay</div><div class="vs">Building P(t) = P&#8320;&middot;r<sup>t</sup> from a word problem</div></a><a class="vid" href="https://www.youtube.com/results?search_query=organic+chemistry+tutor+exponential+functions" target="_blank" rel="noopener"><div class="vlbl">Organic Chemistry Tutor</div><div class="vt">Exponential functions</div><div class="vs">Clear worked examples of growth-rate problems</div></a><a class="vid" href="https://www.youtube.com/results?search_query=doubling+time+exponential+function" target="_blank" rel="noopener"><div class="vlbl">YouTube search</div><div class="vt">Doubling &amp; half-life problems</div><div class="vs">Using 2<sup>(t/k)</sup> when doubling every k units</div></a><a class="vid" href="https://www.youtube.com/results?search_query=geometric+sequence+nth+term+formula" target="_blank" rel="noopener"><div class="vlbl">YouTube search</div><div class="vt">Geometric sequence n<sup>th</sup> term</div><div class="vs">a&#8345; = a&#8321;&middot;r<sup>(n&minus;1)</sup> &mdash; fixes M1 Q19</div></a><a class="vid" href="https://www.youtube.com/results?search_query=SAT+exponential+growth+rate+per+period" target="_blank" rel="noopener"><div class="vlbl">SAT/PSAT prep</div><div class="vt">Rate per period on the SAT</div><div class="vs">Changing the time base (yearly &rarr; 18 months)</div></a><a class="vid" href="https://www.youtube.com/results?search_query=compound+interest+percent+per+period" target="_blank" rel="noopener"><div class="vlbl">YouTube search</div><div class="vt">Compound growth &amp; % per period</div><div class="vs">The exact trap that cost M2 Q10</div></a></div><div class="callout" style="margin-top:20px">Ready to practice? <b><a href="math_ws_exponentials.html" style="color:var(--accent)">Open the Exponential Functions &amp; Growth worksheet &rarr;</a></b></div><footer>PSAT 1 &middot; Math study guide</footer></div></body></html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PSAT Math &amp;mdash; Quadratics Guide</title><style>
+:root{
+  --ink:#1d1d1d; --muted:#5a5f66; --line:#e3e6ea; --bg:#f4f6f8; --card:#fff;
+  --good:#1a7f4b; --good-bg:#e6f4ec; --bad:#c0392b; --bad-bg:#fbecea;
+  --accent:#2f5fd0; --omit:#8a6d1f; --omit-bg:#fbf3d9; --hi:#eef3ff; --hi-b:#cfdcfb;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.6}
+.wrap{max-width:880px;margin:0 auto;padding:32px 22px 80px}
+h1{font-size:26px;margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 22px;font-size:14px}
+h2{font-size:19px;margin:32px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--line)}
+h3{font-size:16px;margin:20px 0 8px}
+.nav{margin-bottom:18px;font-size:13px;display:flex;gap:16px;flex-wrap:wrap}
+.nav a{color:var(--accent);text-decoration:none}
+.nav a:hover{text-decoration:underline}
+.pill{display:inline-block;font-size:11px;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--accent);background:var(--hi);border:1px solid var(--hi-b);border-radius:20px;padding:3px 10px;margin-bottom:10px}
+.block{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:10px;padding:16px 20px;margin:12px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.block h4{margin:0 0 8px;font-size:15px}
+.block ul{margin:6px 0 0 18px;padding:0}
+.block li{margin:5px 0}
+.callout{background:var(--hi);border:1px solid var(--hi-b);border-radius:10px;
+  padding:14px 18px;font-size:14px;margin:12px 0}
+.callout b{color:var(--accent)}
+.trap{background:var(--bad-bg);border:1px solid #f0c9c3;border-radius:10px;padding:14px 18px;font-size:14px;margin:12px 0}
+.trap b{color:var(--bad)}
+.fml{background:#fafbfc;border:1px solid var(--line);border-radius:8px;padding:10px 14px;
+  margin:8px 0;font-size:15px;font-family:"SF Mono",Menlo,Consolas,monospace}
+.eg{background:#fafbfc;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0}
+.eg .step{margin:4px 0;font-size:14px}
+.q{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--muted);
+  border-radius:10px;padding:16px 20px;margin:14px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.q.orig{border-left-color:var(--bad)}
+.q .qref{font-weight:700;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+.q .stem{margin:6px 0 10px}
+.opts{list-style:none;padding:0;margin:0 0 6px}
+.opts li{padding:5px 10px;border:1px solid var(--line);border-radius:8px;margin:5px 0;font-size:14px}
+.optltr{display:inline-block;width:22px;font-weight:700}
+details{margin-top:8px;border:1px solid var(--line);border-radius:8px;background:#fafbfc}
+details[open]{background:#fff}
+summary{cursor:pointer;padding:10px 14px;font-size:13px;font-weight:600;color:var(--accent);
+  list-style:none;user-select:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸ ";}
+details[open] summary::before{content:"▾ ";}
+.soln{padding:2px 16px 14px;font-size:14px}
+.soln .step{margin:6px 0}
+.soln .ans{margin-top:10px;font-weight:700;color:var(--good)}
+sup{font-size:.75em}
+footer{color:var(--muted);font-size:13px;margin-top:40px;text-align:center}
+.vids{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+@media (max-width:640px){.vids{grid-template-columns:1fr}}
+.vid{background:var(--card);border:1px solid var(--line);border-left:4px solid #c0392b;
+  border-radius:10px;padding:14px 16px;text-decoration:none;color:inherit;display:block;
+  box-shadow:0 1px 2px rgba(0,0,0,.03);transition:transform .1s,box-shadow .1s}
+.vid:hover{transform:translateY(-1px);box-shadow:0 3px 10px rgba(0,0,0,.08)}
+.vid .vlbl{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#c0392b;font-weight:700}
+.vid .vt{font-size:14px;font-weight:600;margin:2px 0 4px}
+.vid .vs{font-size:12px;color:var(--muted)}
+@media print{body{background:#fff}.block,.q,.vid{box-shadow:none}.nav{display:none}
+  details{border:none;background:#fff}summary{display:none}.soln{padding:0}.wrap{max-width:none;padding:0}}
+</style></head><body><div class="wrap"><div class="nav"><a href="index.html">&larr; Dashboard</a><a href="math_ws_quadratics.html">Worksheet: Quadratics &rarr;</a></div><span class="pill">Study guide &middot; Priority 1</span><h1>Quadratics</h1><p class="sub">Discriminant · completing the square · Vieta&rsquo;s formulas · vertex form · building from a table</p><div class="callout"><b>Fixes these misses:</b> M1 Q14 · M2 Q5, Q13, Q15, Q16, Q19, Q20, Q22 &mdash; almost half of all Math errors.</div><h2>Core concepts</h2><div class="block"><h4>The three forms of a quadratic</h4><ul><li>Standard: <b>y = ax<sup>2</sup> + bx + c</b> &mdash; c is the y-intercept.</li><li>Factored: <b>y = a(x &minus; r<sub>1</sub>)(x &minus; r<sub>2</sub>)</b> &mdash; r<sub>1</sub>, r<sub>2</sub> are the x-intercepts (roots).</li><li>Vertex: <b>y = a(x &minus; h)<sup>2</sup> + k</b> &mdash; (h, k) is the vertex.</li></ul></div><div class="block"><h4>The discriminant &mdash; how many real solutions?</h4><div class="fml">D = b<sup>2</sup> &minus; 4ac</div><ul><li><b>D &gt; 0</b> &rarr; two distinct real solutions (crosses x-axis twice).</li><li><b>D = 0</b> &rarr; exactly one real solution (touches x-axis &mdash; the vertex sits on it).</li><li><b>D &lt; 0</b> &rarr; no real solutions (never touches the x-axis).</li><li>Most "no real solutions" and "exactly one solution" questions are just discriminant conditions in disguise.</li></ul></div><div class="block"><h4>Completing the square</h4><ul><li>To turn x<sup>2</sup> + bx into a perfect square, add <b>(b/2)<sup>2</sup></b>.</li><li>x<sup>2</sup> + bx + (b/2)<sup>2</sup> = (x + b/2)<sup>2</sup>.</li><li>This is the key move for <b>circle equations</b>: x<sup>2</sup> + x + y<sup>2</sup> + y = k becomes (x + &frac12;)<sup>2</sup> + (y + &frac12;)<sup>2</sup> = k + &frac12;, and r = &radic;(right side).</li></ul></div><div class="block"><h4>Vieta&rsquo;s formulas (sum &amp; product of roots)</h4><div class="fml">For ax<sup>2</sup> + bx + c = 0:  sum = &minus;b/a,  product = c/a</div><ul><li>You can read the sum and product of the roots straight off the coefficients &mdash; no need to actually solve.</li><li>Great for "product of the solutions is k&middot;(something)" questions.</li></ul></div><h2>Worked example &mdash; "exactly one solution"</h2><div class="eg"><div class="step"><b>Problem.</b> Find a so that y = &minus;1.5 and y = x<sup>2</sup> + 8x + a meet at exactly one point.</div><div class="step">Set equal: x<sup>2</sup> + 8x + a = &minus;1.5, i.e. x<sup>2</sup> + 8x + (a + 1.5) = 0.</div><div class="step">"Exactly one solution" &rarr; discriminant = 0: 8<sup>2</sup> &minus; 4(1)(a + 1.5) = 0.</div><div class="step">64 &minus; 4(a + 1.5) = 0 &rarr; a + 1.5 = 16 &rarr; a = 14.5.</div><div class="step">So a = 14.5 (this is the actual M2 Q16 answer).</div></div><div class="trap"><b>Watch out:</b> On M2 Q20 the equation is x<sup>2</sup>+x+y<sup>2</sup>+y = 199/2 (not "1992"). After completing the square on both x and y you add &frac14; twice: 199/2 + &frac14; + &frac14; = 100, so r = &radic;100 = <b>10</b>. Don&rsquo;t skip the "+&frac14; on both sides" step.</div><h2>Video lessons</h2><p class="sub">Curated walkthroughs from trusted math channels &mdash; watch one or two before doing the worksheet.</p><div class="vids"><a class="vid" href="https://www.youtube.com/results?search_query=khan+academy+quadratic+formula+discriminant" target="_blank" rel="noopener"><div class="vlbl">Khan Academy</div><div class="vt">Discriminant &amp; the quadratic formula</div><div class="vs">Number of real solutions from b&sup2;&minus;4ac</div></a><a class="vid" href="https://www.youtube.com/results?search_query=organic+chemistry+tutor+completing+the+square" target="_blank" rel="noopener"><div class="vlbl">Organic Chemistry Tutor</div><div class="vt">Completing the square</div><div class="vs">Step-by-step technique, including circle equations</div></a><a class="vid" href="https://www.youtube.com/results?search_query=vieta%27s+formulas+sum+and+product+of+roots" target="_blank" rel="noopener"><div class="vlbl">YouTube search</div><div class="vt">Vieta&rsquo;s formulas</div><div class="vs">Sum &amp; product of roots without solving</div></a><a class="vid" href="https://www.youtube.com/results?search_query=khan+academy+vertex+form+quadratic" target="_blank" rel="noopener"><div class="vlbl">Khan Academy</div><div class="vt">Vertex form of a quadratic</div><div class="vs">Convert between standard and vertex form</div></a><a class="vid" href="https://www.youtube.com/results?search_query=SAT+PSAT+quadratic+equations+practice" target="_blank" rel="noopener"><div class="vlbl">SAT/PSAT prep</div><div class="vt">SAT/PSAT quadratics walkthroughs</div><div class="vs">Real digital SAT problems, timed strategy</div></a><a class="vid" href="https://www.youtube.com/results?search_query=circle+equation+complete+the+square" target="_blank" rel="noopener"><div class="vlbl">YouTube search</div><div class="vt">Circle equations from x&sup2;+y&sup2; form</div><div class="vs">Directly fixes the M2 Q20 miss</div></a></div><div class="callout" style="margin-top:20px">Ready to practice? <b><a href="math_ws_quadratics.html" style="color:var(--accent)">Open the Quadratics worksheet &rarr;</a></b></div><footer>PSAT 1 &middot; Math study guide</footer></div></body></html>

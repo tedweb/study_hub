@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PSAT 1 — Study Plan</title>
+<style>
+:root{
+  --ink:#1d1d1d; --muted:#5a5f66; --line:#e3e6ea; --bg:#f4f6f8; --card:#fff;
+  --good:#1a7f4b; --good-bg:#e6f4ec; --bad:#c0392b; --bad-bg:#fbecea;
+  --accent:#2f5fd0; --omit:#8a6d1f; --omit-bg:#fbf3d9;
+  --hi:#eef3ff; --hi-b:#cfdcfb;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.55}
+.wrap{max-width:940px;margin:0 auto;padding:32px 22px 80px}
+h1{font-size:26px;margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 26px;font-size:14px}
+h2{font-size:19px;margin:34px 0 14px;padding-bottom:6px;border-bottom:2px solid var(--line)}
+h3{font-size:16px;margin:22px 0 8px}
+.cards{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:18px 20px;flex:1;min-width:150px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.card .label{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.card .big{font-size:34px;font-weight:700;margin:4px 0 2px}
+.card .note{font-size:13px;color:var(--muted)}
+.bar{height:9px;border-radius:6px;background:var(--line);overflow:hidden;margin-top:10px}
+.bar > i{display:block;height:100%;border-radius:6px;background:var(--accent)}
+@media (max-width:520px){
+  .card{min-width:0;padding:14px 16px}
+  .card:first-child{flex:1 0 100%}
+  .card .big{font-size:28px}
+}
+table{width:100%;border-collapse:collapse;background:var(--card);
+  border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:14px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#f0f3f7;font-size:12px;text-transform:uppercase;letter-spacing:.03em;color:var(--muted)}
+tr:last-child td{border-bottom:none}
+.tag{display:inline-block;padding:2px 9px;border-radius:20px;font-size:12px;font-weight:600}
+.t-hi{background:var(--bad-bg);color:var(--bad)}
+.t-med{background:var(--omit-bg);color:var(--omit)}
+.t-low{background:var(--good-bg);color:var(--good)}
+.callout{background:var(--hi);border:1px solid var(--hi-b);border-radius:10px;
+  padding:14px 18px;font-size:14px;margin:10px 0 6px}
+.callout b{color:var(--accent)}
+.block{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:10px;padding:16px 20px;margin:12px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.block h4{margin:0 0 6px;font-size:15px}
+.block .items{font-size:13px;color:var(--muted);margin:0 0 8px}
+.block ul{margin:6px 0 0 18px;padding:0;font-size:14px}
+.block li{margin:3px 0}
+.week{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:14px 18px;margin:10px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.week h4{margin:0 0 6px;font-size:15px;color:var(--accent)}
+.week ul{margin:6px 0 0 18px;padding:0;font-size:14px}
+.strat{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.strat > div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px}
+.strat h4{margin:0 0 6px;font-size:14px;color:var(--accent)}
+.strat ul{margin:4px 0 0 18px;padding:0;font-size:13px}
+@media (max-width:640px){.strat{grid-template-columns:1fr}}
+.nav{margin-bottom:18px;font-size:13px}
+.nav a{color:var(--accent);text-decoration:none}
+.nav a:hover{text-decoration:underline}
+.res{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);
+  display:flex;gap:8px;flex-wrap:wrap;font-size:13px}
+.res a{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:20px;
+  text-decoration:none;font-weight:600;border:1px solid var(--hi-b);
+  background:var(--hi);color:var(--accent);transition:background .1s}
+.res a:hover{background:#dde8ff}
+.res a.ws{background:#fff;border-color:var(--line);color:var(--ink)}
+.res a.ws:hover{background:#f0f3f7}
+.res .rlbl{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);
+  align-self:center;margin-right:4px}
+@media print{body{background:#fff}.card,table,.block,.week{box-shadow:none}.nav,.res{display:none}.wrap{max-width:none;padding:0}}
+</style></head>
+<body><div class="wrap">
+
+<div class="nav"><a href="index.html">← Back to dashboard</a></div>
+<h1>PSAT Practice Test 1 — Personalized Study Plan</h1>
+<p class="sub">Built from the 35 missed questions on PSAT 1 · aimed at pushing overall score above 80%</p>
+
+<div class="cards">
+  <div class="card"><div class="label">Current Overall</div>
+    <div class="big">65%</div>
+    <div class="note">64 of 99 correct</div>
+    <div class="bar"><i style="width:65%"></i></div></div>
+  <div class="card"><div class="label">Reading &amp; Writing</div>
+    <div class="big">73%</div>
+    <div class="note">40 of 55 · solid, needs polish</div>
+    <div class="bar"><i style="width:73%;background:var(--good)"></i></div></div>
+  <div class="card"><div class="label">Math</div>
+    <div class="big">55%</div>
+    <div class="note">24 of 44 · <b style="color:var(--bad)">top priority</b></div>
+    <div class="bar"><i style="width:55%;background:var(--bad)"></i></div></div>
+</div>
+
+<div class="callout" style="margin-top:18px">
+<p><b>Bottom line:</b> Reading &amp; Writing is already strong — small habit fixes can lift it further. Math (especially Module 2 at 45%) is where the score gains live. Focus study time roughly <b>70% Math / 30% R&amp;W</b>.</p>
+<p><b>Never leave a question blank.</b> Four Math questions were omitted (a guaranteed loss on the PSAT, which has no wrong-answer penalty). Fixing just that habit is worth points on the next test.</p>
+</div>
+
+<h2>Where the errors are clustered</h2>
+<table>
+  <thead><tr><th>Section</th><th>Module 1</th><th>Module 2</th><th>Total missed</th><th>Priority</th></tr></thead>
+  <tbody>
+    <tr><td>Math</td><td>8 / 22</td><td>12 / 22</td><td><b>20</b></td><td><span class="tag t-hi">High</span></td></tr>
+    <tr><td>Reading &amp; Writing</td><td>7 / 27</td><td>8 / 28</td><td><b>15</b></td><td><span class="tag t-med">Medium</span></td></tr>
+  </tbody>
+</table>
+
+<!-- ============ MATH DIAGNOSIS ============ -->
+<h2>Math — what to work on, in priority order</h2>
+
+<div class="block">
+  <h4>1. Quadratics — the single biggest weak spot <span class="tag t-hi">Highest priority</span></h4>
+  <p class="items">Missed: M1 Q14 · M2 Q5, Q13, Q15, Q16, Q19, Q20, Q22 (8 questions)</p>
+  <p>Almost half of Math errors involve a quadratic in some form. Every sub-skill here appeared: reading a quadratic off a table, discriminant conditions, factoring form, sum/product of roots (Vieta's), completing the square for circles, vertex form.</p>
+  <ul>
+    <li><b>Master the discriminant:</b> b²−4ac &lt; 0 → no real solutions, = 0 → one solution, &gt; 0 → two solutions. Two of the missed grid-ins hinged on this.</li>
+    <li><b>Complete the square on sight</b> — including in circle equations of the form x²+x+y²+y=k (Q20). Practice until it's automatic.</li>
+    <li><b>Vieta's formulas:</b> for ax²+bx+c=0, sum of roots = −b/a, product = c/a. This unlocks Q19 quickly.</li>
+    <li><b>Vertex form ↔ standard form:</b> know how to move between y=a(x−h)²+k and y=ax²+bx+c, and what each parameter tells you.</li>
+    <li><b>Building a quadratic from a table of values:</b> plug three points into y=ax²+bx+c and solve the system (Q5).</li>
+  </ul>
+  <div class="res">
+    <span class="rlbl">Resources:</span>
+    <a href="math_guide_quadratics.html">Study guide →</a>
+    <a class="ws" href="math_ws_quadratics.html">Practice worksheet →</a>
+  </div>
+</div>
+
+<div class="block">
+  <h4>2. Exponential functions &amp; growth models <span class="tag t-hi">High</span></h4>
+  <p class="items">Missed: M1 Q14, Q19 · M2 Q10 (3 questions)</p>
+  <ul>
+    <li>Understand the standard form <b>P(t) = P₀ · r^t</b> and be able to translate between growth per period and per unit time (Q10 uses r=1.0446 per year — asks for % per period).</li>
+    <li>Distinguish arithmetic vs. geometric sequences: "each term is 4 times the preceding" → geometric, so wₙ = 9·4^(n−1).</li>
+    <li>Doubling problems: if quantity doubles every k time units, model is P·2^(t/k).</li>
+  </ul>
+  <div class="res">
+    <span class="rlbl">Resources:</span>
+    <a href="math_guide_exponentials.html">Study guide →</a>
+    <a class="ws" href="math_ws_exponentials.html">Practice worksheet →</a>
+  </div>
+</div>
+
+<div class="block">
+  <h4>3. Linear equations &amp; systems — "no solution" / translations <span class="tag t-med">Medium</span></h4>
+  <p class="items">Missed: M1 Q6, Q9, Q18, Q22 · M2 Q4, Q11 (6 questions)</p>
+  <ul>
+    <li><b>No solution</b> = same slope, different y-intercept (parallel lines). Q18 &amp; Q11 both test this. Rewrite each equation into y = mx + b form and compare.</li>
+    <li><b>Translating a line down k units:</b> subtract k from the y side, i.e. y becomes y+k in the equation. Then set y=0 to find the new x-intercept (Q22 M1).</li>
+    <li>Simple algebra like 4x−4=112 (Q9) was missed — likely a rushed step. Slow down and re-read what's being asked (x−1, not x).</li>
+    <li><b>Read grid-in prompts twice.</b> Q6 asks for a valid combination given constraints, not just any x — get every question's ask nailed before solving.</li>
+  </ul>
+  <div class="res">
+    <span class="rlbl">Resources:</span>
+    <a href="math_guide_linear.html">Study guide →</a>
+    <a class="ws" href="math_ws_linear.html">Practice worksheet →</a>
+  </div>
+</div>
+
+<div class="block">
+  <h4>4. Function evaluation &amp; rational/asymptotic behavior <span class="tag t-med">Medium</span></h4>
+  <p class="items">Missed: M2 Q6, Q18 (2 questions)</p>
+  <ul>
+    <li>For f(x) with fractional/rational forms, substitute carefully and isolate the variable step-by-step.</li>
+    <li>Recognize graphs of rational functions: vertical asymptote → denominator zero; horizontal asymptote → ratio of leading coefficients.</li>
+  </ul>
+  <div class="res">
+    <span class="rlbl">Resources:</span>
+    <a href="math_guide_functions.html">Study guide →</a>
+    <a class="ws" href="math_ws_functions.html">Practice worksheet →</a>
+  </div>
+</div>
+
+<div class="block">
+  <h4>5. Exponent rules &amp; percent change <span class="tag t-low">Refresh</span></h4>
+  <p class="items">Missed: M1 Q16 (exponents), Q17 (percent)</p>
+  <ul>
+    <li>Fractional exponents: x^(1/n) = ⁿ√x; x^(a/b) = (x^a)^(1/b). Rewrite radicals as fractional exponents to combine cleanly.</li>
+    <li>A 7% increase means multiplying by 1.07 (not 0.07 or 107). This is a one-line fix but it cost a point.</li>
+  </ul>
+  <div class="res">
+    <span class="rlbl">Resources:</span>
+    <a href="math_guide_percent_exponents.html">Study guide →</a>
+    <a class="ws" href="math_ws_percent_exponents.html">Practice worksheet →</a>
+  </div>
+</div>
+
+<!-- ============ R&W DIAGNOSIS ============ -->
+<h2>Reading &amp; Writing — targeted fixes</h2>
+
+<div class="block">
+  <h4>1. Transitions &amp; text-structure logic <span class="tag t-hi">Highest R&amp;W priority</span></h4>
+  <p class="items">Missed: M1 Q7, Q21 · M2 Q3, Q26 (4 questions)</p>
+  <ul>
+    <li>Before picking the transition, <b>write one word in the margin</b> describing the relationship between the two sentences: contrast, cause, example, addition, sequence. Then match to the choices.</li>
+    <li>"However / but / yet" signal contrast; "therefore / thus / as a result" signal cause; "for example / for instance" signal illustration; "moreover / furthermore" signal addition.</li>
+    <li>Beware of transitions that are grammatically fine but logically wrong for the paragraph — that's exactly how these were missed.</li>
+  </ul>
+</div>
+
+<div class="block">
+  <h4>2. Vocabulary in context <span class="tag t-med">Medium</span></h4>
+  <p class="items">Missed: M1 Q1 (hinder), Q3 (haphazard) — both in the first three questions of the test</p>
+  <ul>
+    <li><b>Predict before you peek.</b> Cover the choices, read the sentence, and put your own word in the blank. Then match.</li>
+    <li>Watch for "didn't ___" phrasing — the blank's meaning inverts. Q1 got missed likely because "aggravate" felt like a strong contrast word without checking meaning.</li>
+    <li>Build a running list of "context" words missed (hinder, haphazard so far) — review these before the next test.</li>
+  </ul>
+</div>
+
+<div class="block">
+  <h4>3. Grammar &amp; punctuation (Rules-of-thumb section) <span class="tag t-med">Medium</span></h4>
+  <p class="items">Missed: M2 Q19, Q21, Q22 (3 questions)</p>
+  <ul>
+    <li><b>Semicolon = period-lite:</b> both sides must be independent clauses. Comma alone between two independent clauses = comma splice.</li>
+    <li>Subject-verb agreement across long prepositional phrases: strip the middle to see the real subject.</li>
+    <li>Verb tense should be consistent with the surrounding paragraph's timeframe unless a clear signal shifts it.</li>
+  </ul>
+</div>
+
+<div class="block">
+  <h4>4. Inference / main idea / purpose <span class="tag t-med">Medium</span></h4>
+  <p class="items">Missed: M1 Q12, Q18 · M2 Q1, Q16, Q22 (5 questions)</p>
+  <ul>
+    <li>The correct answer is <b>always supportable from the text alone</b>. If a choice requires outside knowledge or one extra assumption, it's wrong — even if it sounds true.</li>
+    <li>Eliminate choices that are <b>too extreme</b> (always, never, first, only) or <b>too narrow</b> (mention one detail but miss the main point).</li>
+  </ul>
+</div>
+
+<div class="block">
+  <h4>5. Data / graph interpretation <span class="tag t-low">Refresh</span></h4>
+  <p class="items">Missed: M1 Q11 · M2 Q12 (2 questions)</p>
+  <ul>
+    <li>Read axis labels and units first. Then locate the exact data point the question refers to before looking at the choices.</li>
+    <li>The correct choice must be <b>both accurate and relevant to the claim</b> — sometimes a choice is factually right but doesn't support the specific argument.</li>
+  </ul>
+</div>
+
+<!-- ============ CROSS-CUTTING STRATEGY ============ -->
+<h2>Test-taking habits to change</h2>
+<div class="strat">
+  <div>
+    <h4>Never omit</h4>
+    <ul>
+      <li>4 Math questions were left blank — all in Module 2, likely due to time pressure.</li>
+      <li>PSAT has no wrong-answer penalty. Always eliminate what you can and pick.</li>
+      <li>In your last 30 seconds per module, fill every remaining bubble — even random.</li>
+    </ul>
+  </div>
+  <div>
+    <h4>Pacing target</h4>
+    <ul>
+      <li>Math: ~1:35 per question. Skip anything that takes &gt;2:30 and return if time permits.</li>
+      <li>R&amp;W: ~1:10 per question — the section is finishable if you don't over-invest in one hard item.</li>
+      <li>Flag &amp; return: use the review screen aggressively.</li>
+    </ul>
+  </div>
+  <div>
+    <h4>Read the ask, twice</h4>
+    <ul>
+      <li>Several misses (M1 Q9 asked for x−1, not x) came from answering a related-but-wrong question.</li>
+      <li>Underline what the question actually wants before solving.</li>
+    </ul>
+  </div>
+  <div>
+    <h4>Show work on grid-ins</h4>
+    <ul>
+      <li>Grid-in error rate is high (6 of the 20 Math misses were grid-ins, including all 4 omissions).</li>
+      <li>Set up equations on scratch paper — mental math accumulates errors on multi-step problems.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ 4-WEEK PLAN ============ -->
+<h2>Suggested 4-week schedule</h2>
+<p class="sub">Assumes ~5 hours/week. Adjust volume to fit — the sequencing matters more than the hours.</p>
+
+<div class="week">
+  <h4>Week 1 — Quadratics deep dive (Math)</h4>
+  <ul>
+    <li>Review discriminant, Vieta's formulas, completing the square, and vertex form. Khan Academy "Quadratic functions &amp; equations" unit.</li>
+    <li>Redo M2 Q5, Q13, Q15, Q16, Q19, Q20, Q22 from scratch — write out full solutions, don't just look at answers.</li>
+    <li>Do one timed set of 15 mixed quadratic problems.</li>
+  </ul>
+</div>
+
+<div class="week">
+  <h4>Week 2 — Linear systems, exponentials, and function rules (Math)</h4>
+  <ul>
+    <li>Drill "no-solution" and "infinite-solution" conditions for linear systems.</li>
+    <li>Practice translating growth rates in P(t)=P₀·r^t between different time bases.</li>
+    <li>Redo M1 Q6, Q9, Q14, Q16, Q17, Q18, Q19, Q22 and M2 Q4, Q6, Q10, Q11.</li>
+    <li>End of week: full timed Math module from an official College Board PSAT/SAT practice test.</li>
+  </ul>
+</div>
+
+<div class="week">
+  <h4>Week 3 — R&amp;W transitions, vocab, grammar</h4>
+  <ul>
+    <li>Do 20 transition-question drills. Force yourself to name the relationship before reading choices.</li>
+    <li>Build a personal vocab list from missed items; review daily (5 min).</li>
+    <li>Review semicolons, comma splices, subject-verb agreement.</li>
+    <li>Redo all 15 R&amp;W misses, articulating why each correct answer wins <em>and</em> why each distractor fails.</li>
+  </ul>
+</div>
+
+<div class="week">
+  <h4>Week 4 — Full practice test + weakness sweep</h4>
+  <ul>
+    <li>Take a full-length official practice test under timed conditions, in one sitting.</li>
+    <li>Score, then repeat this same diagnostic process: cluster misses by topic, target the top two clusters.</li>
+    <li>Confirm no omissions and pacing targets were hit.</li>
+  </ul>
+</div>
+
+<h2>Expected impact</h2>
+<div class="callout">
+<p>Nailing the <b>quadratics cluster alone</b> is worth ~8 points on the raw Math score. Adding <b>no omissions</b> and <b>tighter transitions</b> in R&amp;W realistically pushes the overall from 65% into the low 80s on the next practice test — before touching any new material.</p>
+</div>
+
+</div></body></html>

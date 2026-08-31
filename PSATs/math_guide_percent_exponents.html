@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PSAT Math &amp;mdash; Percent Change &amp; Exponent Rules Guide</title><style>
+:root{
+  --ink:#1d1d1d; --muted:#5a5f66; --line:#e3e6ea; --bg:#f4f6f8; --card:#fff;
+  --good:#1a7f4b; --good-bg:#e6f4ec; --bad:#c0392b; --bad-bg:#fbecea;
+  --accent:#2f5fd0; --omit:#8a6d1f; --omit-bg:#fbf3d9; --hi:#eef3ff; --hi-b:#cfdcfb;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.6}
+.wrap{max-width:880px;margin:0 auto;padding:32px 22px 80px}
+h1{font-size:26px;margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 22px;font-size:14px}
+h2{font-size:19px;margin:32px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--line)}
+h3{font-size:16px;margin:20px 0 8px}
+.nav{margin-bottom:18px;font-size:13px;display:flex;gap:16px;flex-wrap:wrap}
+.nav a{color:var(--accent);text-decoration:none}
+.nav a:hover{text-decoration:underline}
+.pill{display:inline-block;font-size:11px;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--accent);background:var(--hi);border:1px solid var(--hi-b);border-radius:20px;padding:3px 10px;margin-bottom:10px}
+.block{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:10px;padding:16px 20px;margin:12px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.block h4{margin:0 0 8px;font-size:15px}
+.block ul{margin:6px 0 0 18px;padding:0}
+.block li{margin:5px 0}
+.callout{background:var(--hi);border:1px solid var(--hi-b);border-radius:10px;
+  padding:14px 18px;font-size:14px;margin:12px 0}
+.callout b{color:var(--accent)}
+.trap{background:var(--bad-bg);border:1px solid #f0c9c3;border-radius:10px;padding:14px 18px;font-size:14px;margin:12px 0}
+.trap b{color:var(--bad)}
+.fml{background:#fafbfc;border:1px solid var(--line);border-radius:8px;padding:10px 14px;
+  margin:8px 0;font-size:15px;font-family:"SF Mono",Menlo,Consolas,monospace}
+.eg{background:#fafbfc;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0}
+.eg .step{margin:4px 0;font-size:14px}
+.q{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--muted);
+  border-radius:10px;padding:16px 20px;margin:14px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.q.orig{border-left-color:var(--bad)}
+.q .qref{font-weight:700;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+.q .stem{margin:6px 0 10px}
+.opts{list-style:none;padding:0;margin:0 0 6px}
+.opts li{padding:5px 10px;border:1px solid var(--line);border-radius:8px;margin:5px 0;font-size:14px}
+.optltr{display:inline-block;width:22px;font-weight:700}
+details{margin-top:8px;border:1px solid var(--line);border-radius:8px;background:#fafbfc}
+details[open]{background:#fff}
+summary{cursor:pointer;padding:10px 14px;font-size:13px;font-weight:600;color:var(--accent);
+  list-style:none;user-select:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸ ";}
+details[open] summary::before{content:"▾ ";}
+.soln{padding:2px 16px 14px;font-size:14px}
+.soln .step{margin:6px 0}
+.soln .ans{margin-top:10px;font-weight:700;color:var(--good)}
+sup{font-size:.75em}
+footer{color:var(--muted);font-size:13px;margin-top:40px;text-align:center}
+.vids{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+@media (max-width:640px){.vids{grid-template-columns:1fr}}
+.vid{background:var(--card);border:1px solid var(--line);border-left:4px solid #c0392b;
+  border-radius:10px;padding:14px 16px;text-decoration:none;color:inherit;display:block;
+  box-shadow:0 1px 2px rgba(0,0,0,.03);transition:transform .1s,box-shadow .1s}
+.vid:hover{transform:translateY(-1px);box-shadow:0 3px 10px rgba(0,0,0,.08)}
+.vid .vlbl{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#c0392b;font-weight:700}
+.vid .vt{font-size:14px;font-weight:600;margin:2px 0 4px}
+.vid .vs{font-size:12px;color:var(--muted)}
+@media print{body{background:#fff}.block,.q,.vid{box-shadow:none}.nav{display:none}
+  details{border:none;background:#fff}summary{display:none}.soln{padding:0}.wrap{max-width:none;padding:0}}
+</style></head><body><div class="wrap"><div class="nav"><a href="index.html">&larr; Dashboard</a><a href="math_ws_percent_exponents.html">Worksheet: Percent Change &amp; Exponent Rules &rarr;</a></div><span class="pill">Study guide &middot; Priority 5</span><h1>Percent Change &amp; Exponent Rules</h1><p class="sub">Multiplying by 1.07 for +7% · fractional exponents &amp; radicals</p><div class="callout"><b>Fixes these misses:</b> M1 Q17 (percent), M1 Q16 (fractional exponents).</div><h2>Core concepts</h2><div class="block"><h4>Percent change as a multiplier</h4><ul><li>Increase by p% &rarr; multiply by <b>(1 + p/100)</b>. A 7% increase &rarr; &times;1.07.</li><li>Decrease by p% &rarr; multiply by (1 &minus; p/100). A 7% decrease &rarr; &times;0.93.</li><li>Successive changes multiply: +10% then +20% &rarr; &times;1.10&times;1.20 = &times;1.32 (not +30%).</li></ul></div><div class="block"><h4>Exponent rules</h4><ul><li>x<sup>a</sup>&middot;x<sup>b</sup> = x<sup>a+b</sup> &nbsp;&middot;&nbsp; x<sup>a</sup>/x<sup>b</sup> = x<sup>a&minus;b</sup> &nbsp;&middot;&nbsp; (x<sup>a</sup>)<sup>b</sup> = x<sup>ab</sup>.</li><li>(xy)<sup>a</sup> = x<sup>a</sup>y<sup>a</sup>.</li></ul></div><div class="block"><h4>Fractional exponents &amp; radicals</h4><div class="fml">x<sup>(1/n)</sup> = <sup>n</sup>&radic;x ,  x<sup>(a/b)</sup> = <sup>b</sup>&radic;(x<sup>a</sup>)</div><ul><li>Rewrite radicals as fractional exponents to combine them cleanly.</li><li><sup>7</sup>&radic;(x<sup>9</sup>y<sup>9</sup>) = (x<sup>9</sup>y<sup>9</sup>)<sup>(1/7)</sup> = x<sup>(9/7)</sup>y<sup>(9/7)</sup>.</li></ul></div><h2>Worked example &mdash; a clean percent multiplier</h2><div class="eg"><div class="step"><b>Problem.</b> City A&rsquo;s population rose 7% from 2015 to 2016. If 2016 = k &times; 2015, what is k?</div><div class="step">A 7% increase means multiply by 1 + 0.07 = 1.07.</div><div class="step">So k = 1.07 (this is the M1 Q17 answer).</div></div><div class="trap"><b>Watch out:</b> "+7%" is <b>&times;1.07</b>, not &times;0.07 and not &times;1.7. This is a one-line idea but it cost a point on M1 Q17. For exponents, rewrite every radical as a fractional power before combining &mdash; don&rsquo;t guess.</div><h2>Video lessons</h2><p class="sub">Curated walkthroughs from trusted math channels &mdash; watch one or two before doing the worksheet.</p><div class="vids"><a class="vid" href="https://www.youtube.com/results?search_query=khan+academy+percent+increase+multiplier" target="_blank" rel="noopener"><div class="vlbl">Khan Academy</div><div class="vt">Percent increase as a multiplier</div><div class="vs">Why +7% means &times;1.07 &mdash; fixes M1 Q17</div></a><a class="vid" href="https://www.youtube.com/results?search_query=organic+chemistry+tutor+exponent+rules" target="_blank" rel="noopener"><div class="vlbl">Organic Chemistry Tutor</div><div class="vt">Exponent rules explained</div><div class="vs">Product, quotient, power &amp; negative exponents</div></a><a class="vid" href="https://www.youtube.com/results?search_query=khan+academy+fractional+exponents+radicals" target="_blank" rel="noopener"><div class="vlbl">Khan Academy</div><div class="vt">Fractional exponents &amp; radicals</div><div class="vs">x<sup>(a/b)</sup> = <sup>b</sup>&radic;(x<sup>a</sup>) &mdash; fixes M1 Q16</div></a><a class="vid" href="https://www.youtube.com/results?search_query=SAT+successive+percent+change" target="_blank" rel="noopener"><div class="vlbl">SAT/PSAT prep</div><div class="vt">Successive percent changes</div><div class="vs">Why +10% then +20% is not +30%</div></a></div><div class="callout" style="margin-top:20px">Ready to practice? <b><a href="math_ws_percent_exponents.html" style="color:var(--accent)">Open the Percent Change &amp; Exponent Rules worksheet &rarr;</a></b></div><footer>PSAT 1 &middot; Math study guide</footer></div></body></html>

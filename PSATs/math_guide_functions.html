@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PSAT Math &amp;mdash; Function Evaluation &amp; Asymptotes Guide</title><style>
+:root{
+  --ink:#1d1d1d; --muted:#5a5f66; --line:#e3e6ea; --bg:#f4f6f8; --card:#fff;
+  --good:#1a7f4b; --good-bg:#e6f4ec; --bad:#c0392b; --bad-bg:#fbecea;
+  --accent:#2f5fd0; --omit:#8a6d1f; --omit-bg:#fbf3d9; --hi:#eef3ff; --hi-b:#cfdcfb;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.6}
+.wrap{max-width:880px;margin:0 auto;padding:32px 22px 80px}
+h1{font-size:26px;margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 22px;font-size:14px}
+h2{font-size:19px;margin:32px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--line)}
+h3{font-size:16px;margin:20px 0 8px}
+.nav{margin-bottom:18px;font-size:13px;display:flex;gap:16px;flex-wrap:wrap}
+.nav a{color:var(--accent);text-decoration:none}
+.nav a:hover{text-decoration:underline}
+.pill{display:inline-block;font-size:11px;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--accent);background:var(--hi);border:1px solid var(--hi-b);border-radius:20px;padding:3px 10px;margin-bottom:10px}
+.block{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:10px;padding:16px 20px;margin:12px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.block h4{margin:0 0 8px;font-size:15px}
+.block ul{margin:6px 0 0 18px;padding:0}
+.block li{margin:5px 0}
+.callout{background:var(--hi);border:1px solid var(--hi-b);border-radius:10px;
+  padding:14px 18px;font-size:14px;margin:12px 0}
+.callout b{color:var(--accent)}
+.trap{background:var(--bad-bg);border:1px solid #f0c9c3;border-radius:10px;padding:14px 18px;font-size:14px;margin:12px 0}
+.trap b{color:var(--bad)}
+.fml{background:#fafbfc;border:1px solid var(--line);border-radius:8px;padding:10px 14px;
+  margin:8px 0;font-size:15px;font-family:"SF Mono",Menlo,Consolas,monospace}
+.eg{background:#fafbfc;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0}
+.eg .step{margin:4px 0;font-size:14px}
+.q{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--muted);
+  border-radius:10px;padding:16px 20px;margin:14px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.q.orig{border-left-color:var(--bad)}
+.q .qref{font-weight:700;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+.q .stem{margin:6px 0 10px}
+.opts{list-style:none;padding:0;margin:0 0 6px}
+.opts li{padding:5px 10px;border:1px solid var(--line);border-radius:8px;margin:5px 0;font-size:14px}
+.optltr{display:inline-block;width:22px;font-weight:700}
+details{margin-top:8px;border:1px solid var(--line);border-radius:8px;background:#fafbfc}
+details[open]{background:#fff}
+summary{cursor:pointer;padding:10px 14px;font-size:13px;font-weight:600;color:var(--accent);
+  list-style:none;user-select:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸ ";}
+details[open] summary::before{content:"▾ ";}
+.soln{padding:2px 16px 14px;font-size:14px}
+.soln .step{margin:6px 0}
+.soln .ans{margin-top:10px;font-weight:700;color:var(--good)}
+sup{font-size:.75em}
+footer{color:var(--muted);font-size:13px;margin-top:40px;text-align:center}
+.vids{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+@media (max-width:640px){.vids{grid-template-columns:1fr}}
+.vid{background:var(--card);border:1px solid var(--line);border-left:4px solid #c0392b;
+  border-radius:10px;padding:14px 16px;text-decoration:none;color:inherit;display:block;
+  box-shadow:0 1px 2px rgba(0,0,0,.03);transition:transform .1s,box-shadow .1s}
+.vid:hover{transform:translateY(-1px);box-shadow:0 3px 10px rgba(0,0,0,.08)}
+.vid .vlbl{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#c0392b;font-weight:700}
+.vid .vt{font-size:14px;font-weight:600;margin:2px 0 4px}
+.vid .vs{font-size:12px;color:var(--muted)}
+@media print{body{background:#fff}.block,.q,.vid{box-shadow:none}.nav{display:none}
+  details{border:none;background:#fff}summary{display:none}.soln{padding:0}.wrap{max-width:none;padding:0}}
+</style></head><body><div class="wrap"><div class="nav"><a href="index.html">&larr; Dashboard</a><a href="math_ws_functions.html">Worksheet: Function Evaluation &amp; Asymptotes &rarr;</a></div><span class="pill">Study guide &middot; Priority 4</span><h1>Function Evaluation &amp; Asymptotes</h1><p class="sub">Substituting into f(x) · solving for a constant · reading rational-function graphs</p><div class="callout"><b>Fixes these misses:</b> M2 Q6 (solve for a constant), M2 Q18 (rational-function graph).</div><h2>Core concepts</h2><div class="block"><h4>Evaluating and solving</h4><ul><li>f(a) means substitute a for x everywhere, then simplify.</li><li>If f(a) = value, set the expression equal to that value and solve for a step by step.</li></ul></div><div class="block"><h4>Rational functions &amp; asymptotes</h4><ul><li><b>Vertical asymptote</b>: where the denominator = 0 (the graph shoots to &plusmn;&infin;).</li><li><b>Horizontal asymptote</b>: the value the graph approaches as x &rarr; &plusmn;&infin; &mdash; often the ratio of leading coefficients, or y = 0 when the bottom grows faster.</li><li>Match a described graph to an equation by checking: where does it blow up? what does it level off to?</li></ul></div><div class="block"><h4>Reading a described curve</h4><ul><li>"Approaches the line x = &minus;4" &rarr; vertical asymptote at x = &minus;4 &rarr; denominator has (x + 4).</li><li>"Approaches y = 0 as x decreases" &rarr; horizontal asymptote y = 0.</li></ul></div><h2>Worked example &mdash; solve for a constant</h2><div class="eg"><div class="step"><b>Problem.</b> f(x) = (x + 15)/5 and f(a) = 10. Find a.</div><div class="step">Substitute: (a + 15)/5 = 10.</div><div class="step">Multiply by 5: a + 15 = 50.</div><div class="step">a = 35. (Mirrors the structure of M2 Q6.)</div></div><div class="trap"><b>Watch out:</b> When a function has a fraction, clear the denominator <b>first</b> by multiplying both sides &mdash; don&rsquo;t try to eyeball it. And match asymptotes to the graph before checking specific points; the vertical asymptote alone often eliminates 2&ndash;3 choices.</div><h2>Video lessons</h2><p class="sub">Curated walkthroughs from trusted math channels &mdash; watch one or two before doing the worksheet.</p><div class="vids"><a class="vid" href="https://www.youtube.com/results?search_query=khan+academy+evaluating+functions" target="_blank" rel="noopener"><div class="vlbl">Khan Academy</div><div class="vt">Evaluating functions</div><div class="vs">f(a) &mdash; substituting values into an expression</div></a><a class="vid" href="https://www.youtube.com/results?search_query=organic+chemistry+tutor+rational+functions+asymptotes" target="_blank" rel="noopener"><div class="vlbl">Organic Chemistry Tutor</div><div class="vt">Rational functions &amp; asymptotes</div><div class="vs">Vertical &amp; horizontal asymptotes explained</div></a><a class="vid" href="https://www.youtube.com/results?search_query=finding+vertical+asymptotes+of+rational+functions" target="_blank" rel="noopener"><div class="vlbl">YouTube search</div><div class="vt">Finding vertical asymptotes</div><div class="vs">Where the denominator equals zero</div></a><a class="vid" href="https://www.youtube.com/results?search_query=matching+graphs+to+rational+function+equations" target="_blank" rel="noopener"><div class="vlbl">YouTube search</div><div class="vt">Matching graphs to equations</div><div class="vs">The exact skill tested in M2 Q18</div></a></div><div class="callout" style="margin-top:20px">Ready to practice? <b><a href="math_ws_functions.html" style="color:var(--accent)">Open the Function Evaluation &amp; Asymptotes worksheet &rarr;</a></b></div><footer>PSAT 1 &middot; Math study guide</footer></div></body></html>
