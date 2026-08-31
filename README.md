@@ -20,10 +20,10 @@ PSAT practice test analysis and study materials.
 - **build_math_guides.py / build_reports.py** — Python generators for the guides and reports
 - **psat1_data.json** — Raw test data
 
-### [AP Precalculus Test Review 1/](AP%20Precalculus%20Test%20Review%201/)
+### [ap-precalculus-1/](ap-precalculus-1/)
 Interactive review for AP Precalculus sections 1.1–1.6.
 
-- **[AP Precalculus Test Review 1/index.html](AP%20Precalculus%20Test%20Review%201/index.html)** — Interactive quiz with score tracking; select A–D and submit to unlock the explanation for each question
+- **[ap-precalculus-1/index.html](ap-precalculus-1/index.html)** — Interactive quiz with score tracking; select A–D and submit to unlock the explanation for each question
 
 ## Structure
 
@@ -39,6 +39,6 @@ Clara/
 │   ├── math_guide_*.html
 │   ├── math_ws_*.html
 │   └── build_*.py
-└── AP Precalculus Test Review 1/
+└── ap-precalculus-1/
     └── index.html
 ```

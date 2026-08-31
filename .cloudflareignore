@@ -1,0 +1,12 @@
+.git
+.gitignore
+.DS_Store
+**/.DS_Store
+*.py
+**/*.py
+__pycache__
+psat1_data.json
+node_modules
+.wrangler
+README.md
+wrangler.toml
